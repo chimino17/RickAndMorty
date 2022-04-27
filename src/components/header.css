@@ -1,0 +1,74 @@
+:root {
+    --alive-green: #55CC44;
+  }
+.a{
+    text-decoration: none;
+      color:aliceblue;
+      border: 3px aliceblue;
+      padding: 16px;/*colocacion del margen al pasar el cursor*/
+      border-radius: 6px;
+}
+.a:hover{
+    border: 1px solid var(--alive-green);
+      color: var(--alive-green);
+}
+
+/* .logo{
+    width: 80px;
+    margin-bottom: 0px;
+    border-radius: 50%;
+    position: absolute;
+    /* display: flex; 
+} */
+
+.contact{
+    margin-left: 12px;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px ;
+}
+
+.link{
+    text-decoration: none;
+    color:aliceblue;
+}
+.link:hover{
+      color: var(--alive-green);
+}
+.title{
+    color: #55CC44;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px ;
+}
+.blanc{
+    color: aliceblue;
+}
+.Revisar{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 2px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+.input-palabra{
+    color: rgb(0, 0, 0);
+	background: rgb(255, 255, 255);
+	padding: 1.5px;
+	/* display: inline-block; */
+	
+  font-weight: bold;
+  
+}

@@ -1,0 +1,95 @@
+body{
+  background-color: rgb(36, 40, 47);
+}
+.grid-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    
+}
+
+.product-info {
+    margin: -20px 4px 8px 4px;
+}
+.product-info p {
+    color: rgb(158, 158, 158);
+    font-weight: bold; 
+    margin-top: 0;
+}
+  
+.character__img { 
+    border-radius: 20px 20px 0 0;
+}
+.diptongo{
+  border-radius: 50%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: rgb(60, 62, 68);
+  transition: 0.3s;
+  border-radius: 20px 20px 20px 20px;
+  width: 100%;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(200, 200, 200, 0.2);
+}
+h2{
+  color: aliceblue;
+}
+
+span{
+  color: aliceblue;
+}
+
+.Alive  {
+    color: rgb(85, 204, 68);
+}
+
+.Dead   {
+  color: rgb(214, 61, 46);
+}
+
+.unknown   {
+  color: rgb(255, 255, 255);
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.delete{
+  background-color: #74160f;
+  font-weight: bold; 
+}
+.input {
+	position:relative;
+  color: white;
+	font-size: 1.5em;
+	background: rgb(56, 64, 74);
+	padding: 1.5px;
+	/* display: inline-block; */
+	border-radius: 5px 5px 5px 5px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.input:hover {
+  box-shadow: 0 8px 16px 0 rgba(200, 200, 200, 0.2);
+}
+
+.red{
+  color: rgb(214, 61, 46);
+}
+.grid-container-diptongo{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
