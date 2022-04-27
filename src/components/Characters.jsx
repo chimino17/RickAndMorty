@@ -2,8 +2,8 @@ import React, {
   useState,
   useMemo,
   useRef,
-  useCallback,
   useContext,
+  useCallback,
 } from "react";
 import Search from "./Search";
 import useCharacters from "../hooks/useCharaters";
@@ -14,7 +14,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 const Characters = () => {
   const [page, setPage] = useState(1);
 
-  const API = `https://rickandmortyapi.com/api/character/?page=${page}`; //42 paginas
+  const API = `https://rickandmortyapi.com/api/character/?page=${page}`; //42 paginass
 
   const { state, addTofav } = useContext(AppContext);
   const fav = state;
