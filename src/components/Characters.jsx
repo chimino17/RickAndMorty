@@ -17,9 +17,7 @@ const Characters = () => {
   const API = `https://rickandmortyapi.com/api/character/?page=${page}`; //42 paginas
 
   const { state, addTofav, removeFromfav } = useContext(AppContext);
-  const fav = state;
-  console.log(state);
-
+  // const fav=state;
   const [search, setSearch] = useState("");
   const searchInput = useRef(null);
   const characters = useCharacters(API);
@@ -37,16 +35,13 @@ const Characters = () => {
   );
 
   const handleClick = (character) => {
-    removeFromfav(character);
-
-    if (!fav.favoritos.includes(character)) {
+    if (!state.favoritos.includes(character)) {
       addTofav(character);
     } else {
       removeFromfav(character);
     }
   };
 
-  console.log(fav.favoritos);
   return (
     <InfiniteScroll
       dataLength={characters.length}
@@ -54,7 +49,7 @@ const Characters = () => {
       hasMore={page < 42 ? true : false}
     >
       <div className="Characters">
-        <h2>Favorites: {fav.favoritos.length}</h2>
+        <h2>Favorites: {state.favoritos.length}</h2>
         <Search
           search={search}
           searchInput={searchInput}

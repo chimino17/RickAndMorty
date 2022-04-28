@@ -8,7 +8,7 @@ const Header = () => {
       <nav>
         {/* <img src="rick-and-morty-rick.gif" alt="logo" class="logo "></img>{" "} */}
         <h1>
-          <Link className="a" to="/">
+          <Link className="a" to="/RickAndMorty">
             Characters
           </Link>
           <Link className="a" to="/Favorites">
