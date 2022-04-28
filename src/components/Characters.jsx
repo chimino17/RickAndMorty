@@ -2,8 +2,8 @@ import React, {
   useState,
   useMemo,
   useRef,
-  useContext,
   useCallback,
+  useContext,
 } from "react";
 import Search from "./Search";
 import useCharacters from "../hooks/useCharaters";
@@ -14,21 +14,15 @@ import InfiniteScroll from "react-infinite-scroll-component";
 const Characters = () => {
   const [page, setPage] = useState(1);
 
-  const API = `https://rickandmortyapi.com/api/character/?page=${page}`; //42 paginass
+  const API = `https://rickandmortyapi.com/api/character/?page=${page}`; //42 paginas
 
-  const { state, addTofav } = useContext(AppContext);
+  const { state, addTofav, removeFromfav } = useContext(AppContext);
   const fav = state;
+  console.log(state);
+
   const [search, setSearch] = useState("");
   const searchInput = useRef(null);
   const characters = useCharacters(API);
-
-  const handleClick = (favorite) => {
-    if (!fav.favoritos.includes(favorite)) {
-      addTofav(favorite);
-    } else {
-      // alert("ese personaje ya existe en tu lista de favoritos");
-    }
-  };
 
   const handleSearch = useCallback(() => {
     setSearch(searchInput.current.value);
@@ -41,8 +35,18 @@ const Characters = () => {
       }),
     [characters, search]
   );
-  // console.log(fav);
 
+  const handleClick = (character) => {
+    removeFromfav(character);
+
+    if (!fav.favoritos.includes(character)) {
+      addTofav(character);
+    } else {
+      removeFromfav(character);
+    }
+  };
+
+  console.log(fav.favoritos);
   return (
     <InfiniteScroll
       dataLength={characters.length}

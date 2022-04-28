@@ -4,17 +4,16 @@ import AppContext from "../context/AppContext";
 
 export default function Favorites() {
   const { state, removeFromfav } = useContext(AppContext);
-  const fav = state;
 
   const handleClick = (favorite) => {
     removeFromfav(favorite);
   };
-
+  // console.log(state);
   return (
     <div className="App">
       <h2>Favorites</h2>
       <div className="grid-container">
-        {fav.favoritos.map((favorite) => (
+        {state.favoritos.map((favorite) => (
           <div key={favorite.id} className="card">
             <img className="character__img" src={favorite.image} alt="" />
             <div className="product-info">

@@ -1,35 +1,33 @@
-// import { useContext } from "react";
-// import AppContext from "../context/AppContext";
-
-// // eslint-disable-next-line import/no-anonymous-default-export
-// export default () => useContext(AppContext);
-
 import { useState } from "react";
 import initialState from "../initialState";
-// import {includes} from 'react-lodash/lib/IsEmpty'
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
-  const addTofav = (payload) => {
-    //
+  const addTofav = (favorite) => {
     setState({
       ...state,
-      favoritos: [...state.favoritos, payload],
+      favoritos: [...state.favoritos, favorite],
     });
   };
+
   const removeFromfav = (payload) => {
-    //
     setState({
       ...state,
       favoritos: state.favoritos.filter((items) => items.id !== payload.id),
     });
   };
 
+  const removeDouble = (favorite) => {
+    removeFromfav(favorite);
+    addTofav(favorite);
+  };
+
   return {
-    state, //
+    state,
     addTofav,
     removeFromfav,
+    removeDouble,
   };
 };
 export default useInitialState;
