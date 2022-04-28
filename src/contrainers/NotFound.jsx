@@ -87,9 +87,9 @@ const NotFound = () => {
         <div>
           <img
             className="diptongo"
-            src="rick-and-morty-rick.gif"
+            src="https://c.tenor.com/3hIpHNbcVf4AAAAC/rick-and-morty-rick.gif"
             alt="logo"
-          ></img>{" "}
+          ></img>
         </div>
       </div>
     </>
